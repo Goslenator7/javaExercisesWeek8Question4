@@ -5,6 +5,7 @@ public class AddressBook {
 
     private TreeMap<String, String> addressBook = new TreeMap <String, String>();
 
+    // Add an entry to the address book (user is prompted to enter a name and address)
     public void addEntry() {
         String nameProvided = JOptionPane.showInputDialog("Please enter a name would like to add to the address book: ");
         String addressProvided = JOptionPane.showInputDialog("Please enter "+nameProvided+"'s address: ");
@@ -13,6 +14,7 @@ public class AddressBook {
         JOptionPane.showMessageDialog(null, nameProvided+"'s details were was added to the address book.");
     }
 
+    // Add an entry to the address book while being provided with name and address
     public void addEntry(String personName, String personAddress) {
         addressBook.put(personName, personAddress);
     }
